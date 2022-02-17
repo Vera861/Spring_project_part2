@@ -4,11 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="510ab973-2a66-4f56-86df-8dbe380a4fde" name="Default Changelist" comment="" />
+    <list default="true" id="510ab973-2a66-4f56-86df-8dbe380a4fde" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -16,7 +27,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.4\plugins\maven\lib\maven3" />
+        <option name="mavenHome" value="C:\Users\mvery\.m2\wrapper\dists\apache-maven-3.8.4-bin\52ccbt68d252mdldqsfsn03jlf\apache-maven-3.8.4" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -26,10 +37,66 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/shop-database/src/main/java/ru/gb/persists" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ru.gb" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mvery\Desktop\Spring_project_part2\shop-database\src\main\java\ru\gb\persists" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mvery\Desktop\Spring_project_part2" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Maven.Spring_project_part2 [clean,install]">
+    <configuration name="Spring_project_part2 [clean,install]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="EshopBackendApiAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="eshop-backend-api-app" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.gb.EshopBackendApiAppApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShopAdminAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="shop-admin-app" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.gb.ShopAdminAppApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -39,21 +106,75 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1645045648367</updated>
-      <workItem from="1645045654175" duration="1732000" />
+      <workItem from="1645045654175" duration="7899000" />
+      <workItem from="1645057763639" duration="2063000" />
+      <workItem from="1645103211030" duration="981000" />
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1645047869675</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1645047869675</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="241" y="22" width="1125" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1645052360449">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="241" y="22" width="1125" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1645052360449" />
+    <state x="429" y="233" width="542" height="270" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1645056199691">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="429" y="233" width="542" height="270" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1645056199691" />
+    <state x="279" y="0" key="CommitChangelistDialog2" timestamp="1645047858698">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="279" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1645047858698" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1645047665378">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1645047665378" />
+    <state width="905" height="171" key="GridCell.Tab.0.bottom" timestamp="1645129866036">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="171" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1645129866036" />
+    <state width="905" height="171" key="GridCell.Tab.0.center" timestamp="1645129866031">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="171" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1645129866031" />
+    <state width="905" height="171" key="GridCell.Tab.0.left" timestamp="1645129866031">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="171" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1645129866031" />
+    <state width="905" height="171" key="GridCell.Tab.0.right" timestamp="1645129866031">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="905" height="171" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1645129866031" />
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1645059132512">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1645059132512" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1645047681674">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1645047681674" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1645047888520">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1645047888520" />
+    <state x="65" y="25" key="new project wizard" timestamp="1645051349414">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="25" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1645051349414" />
   </component>
 </project>

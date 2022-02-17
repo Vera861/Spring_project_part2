@@ -4,6 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.3</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
     <groupId>ru.gb</groupId>
     <artifactId>Spring_project_part2</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -12,7 +19,15 @@
     <properties>
         <maven.compiller.source>11</maven.compiller.source>
         <maven.compiller.target>11</maven.compiller.target>
+        <java.version>11</java.version>
+        <liquibase.version>4.3.1</liquibase.version>
     </properties>
+
+    <modules>
+        <module>shop-admin-app</module>
+        <module>eshop-backend-api-app</module>
+        <module>shop-database</module>
+    </modules>
 
 
 </project>
