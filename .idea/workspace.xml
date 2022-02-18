@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="510ab973-2a66-4f56-86df-8dbe380a4fde" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-database/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-database/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-database/src/main/java/ru/gb/persist/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-database/src/main/java/ru/gb/persist/UserRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,21 +44,64 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/shop-database/src/main/java/ru/gb/persists" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/shop-database/src/main/resources/db/changelog/v-1.1" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mvery\Desktop\Spring_project_part2\shop-database\src\main\resources\db\changelog\v-1.1" />
+      <recent name="C:\Users\mvery\Desktop\Spring_project_part2\shop-database\src\main\resources\db\changelog\v-1.0" />
+      <recent name="C:\Users\mvery\Desktop\Spring_project_part2" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ru.gb" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mvery\Desktop\Spring_project_part2\shop-database\src\main\resources\db\changelog\v-1.1" />
+      <recent name="C:\Users\mvery\Desktop\Spring_project_part2\shop-database\src\main\resources\db\changelog\v-1.0" />
+      <recent name="C:\Users\mvery\Desktop\Spring_project_part2\shop-database\src\main\resources" />
       <recent name="C:\Users\mvery\Desktop\Spring_project_part2\shop-database\src\main\java\ru\gb\persists" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\mvery\Desktop\Spring_project_part2" />
-    </key>
   </component>
-  <component name="RunManager" selected="Maven.Spring_project_part2 [clean,install]">
+  <component name="RunManager" selected="Maven. liquibase:update">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name=" liquibase:update" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="compile" />
+                <option value="liquibase:update" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/shop-database" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <configuration name="Spring_project_part2 [clean,install]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -83,6 +128,61 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <configuration name="liquibase:diff" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+                <option value="liquibase:diff" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/shop-database" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="liquibase:rollback" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="compile" />
+                <option value="liquibase:rollback" />
+                <option value="-Dliquibase.rollbackTag=db_init" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/shop-database" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <configuration name="EshopBackendApiAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="eshop-backend-api-app" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.gb.EshopBackendApiAppApplication" />
@@ -97,6 +197,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Maven.Spring_project_part2 [clean,install]" />
+      <item itemvalue="Maven.liquibase:diff" />
+      <item itemvalue="Maven. liquibase:update" />
+      <item itemvalue="Maven.liquibase:rollback" />
+      <item itemvalue="Spring Boot.EshopBackendApiAppApplication" />
+      <item itemvalue="Spring Boot.ShopAdminAppApplication" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -108,7 +216,7 @@
       <updated>1645045648367</updated>
       <workItem from="1645045654175" duration="7899000" />
       <workItem from="1645057763639" duration="2063000" />
-      <workItem from="1645103211030" duration="981000" />
+      <workItem from="1645103211030" duration="11578000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1645047869675</created>
@@ -117,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645047869675</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="liquibase dependency">
+      <created>1645130796595</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1645130796595</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,53 +240,58 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="liquibase dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="liquibase dependency" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="241" y="22" width="1125" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1645052360449">
+    <state x="241" y="22" width="1125" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1645140519598">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="241" y="22" width="1125" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1645052360449" />
+    <state x="241" y="22" width="1125" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1645140519598" />
     <state x="429" y="233" width="542" height="270" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1645056199691">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="429" y="233" width="542" height="270" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1645056199691" />
-    <state x="279" y="0" key="CommitChangelistDialog2" timestamp="1645047858698">
+    <state x="279" y="0" key="CommitChangelistDialog2" timestamp="1645130782598">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="279" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1645047858698" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1645047665378">
+    <state x="279" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1645130782598" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1645132696625">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1645047665378" />
-    <state width="905" height="171" key="GridCell.Tab.0.bottom" timestamp="1645129866036">
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1645132696625" />
+    <state width="1323" height="206" key="GridCell.Tab.0.bottom" timestamp="1645144565817">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="171" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1645129866036" />
-    <state width="905" height="171" key="GridCell.Tab.0.center" timestamp="1645129866031">
+    <state width="1323" height="206" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1645144565817" />
+    <state width="1323" height="206" key="GridCell.Tab.0.center" timestamp="1645144565817">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="171" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1645129866031" />
-    <state width="905" height="171" key="GridCell.Tab.0.left" timestamp="1645129866031">
+    <state width="1323" height="206" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1645144565817" />
+    <state width="1323" height="206" key="GridCell.Tab.0.left" timestamp="1645144565817">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="171" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1645129866031" />
-    <state width="905" height="171" key="GridCell.Tab.0.right" timestamp="1645129866031">
+    <state width="1323" height="206" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1645144565817" />
+    <state width="1323" height="206" key="GridCell.Tab.0.right" timestamp="1645144565817">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="171" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1645129866031" />
+    <state width="1323" height="206" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1645144565817" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1645059132512">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1645059132512" />
-    <state x="184" y="9" key="SettingsEditor" timestamp="1645047681674">
+    <state x="184" y="9" key="SettingsEditor" timestamp="1645136658369">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1645047681674" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1645047888520">
+    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1645136658369" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1645130849183">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1645047888520" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1645130849183" />
+    <state x="144" y="56" key="com.intellij.javaee.MapExternalResourceDialog" timestamp="1645136198945">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="144" y="56" key="com.intellij.javaee.MapExternalResourceDialog/0.0.1366.728@0.0.1366.728" timestamp="1645136198945" />
     <state x="65" y="25" key="new project wizard" timestamp="1645051349414">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
