@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="510ab973-2a66-4f56-86df-8dbe380a4fde" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-admin-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin-app/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-database/src/main/java/ru/gb/persist/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-database/src/main/java/ru/gb/persist/model/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-database/src/main/java/ru/gb/persist/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-database/src/main/java/ru/gb/persist/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-database/src/main/resources/db/changelog/db.changelog-master.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-database/src/main/resources/db/changelog/db.changelog-master.xml" afterDir="false" />
-    </list>
+    <list default="true" id="510ab973-2a66-4f56-86df-8dbe380a4fde" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -245,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645144928956</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="admin_app">
+      <created>1646153068993</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1646153068993</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,7 +256,8 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="liquibase dependency" />
     <MESSAGE value="liquibase" />
-    <option name="LAST_COMMIT_MESSAGE" value="liquibase" />
+    <MESSAGE value="admin_app" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin_app" />
   </component>
   <component name="WindowStateProjectService">
     <state x="241" y="22" width="1125" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1645140519598">
@@ -266,10 +268,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="429" y="233" width="542" height="270" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1645056199691" />
-    <state x="279" y="0" key="CommitChangelistDialog2" timestamp="1645146267004">
+    <state x="279" y="0" key="CommitChangelistDialog2" timestamp="1646153052508">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="279" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1645146267004" />
+    <state x="279" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1646153052508" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1645132696625">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -302,10 +304,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1645136658369" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1645144941555">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1646153222999">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1645144941555" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1646153222999" />
     <state x="144" y="56" key="com.intellij.javaee.MapExternalResourceDialog" timestamp="1645136198945">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
