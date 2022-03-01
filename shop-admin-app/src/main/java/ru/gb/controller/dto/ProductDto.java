@@ -1,40 +1,36 @@
-package ru.gb.persist.model;
+package ru.geekbrains.service.dto;
 
-import javax.persistence.*;
+import ru.gb.controller.dto.CategoryDto;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.PositiveOrZero;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
 
-@Entity
-@Table(name = "products")
-public class Product {
+public class ProductDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
+    @NotBlank
     private String name;
 
-    @Column(length = 65535, columnDefinition = "LONGTEXT")
+    @NotBlank
     private String description;
 
-    @Column
+    @PositiveOrZero
     private BigDecimal price;
 
-    @ManyToOne(optional = false)
-    private Category category;
+    private CategoryDto category;
 
-    public Product() {
+    public ProductDto() {
     }
 
-    public Product(Long id, String name, String description, BigDecimal price, Category category) {
+    public ProductDto(Long id, String name, String description, BigDecimal price, CategoryDto category) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
         this.category = category;
+
     }
 
     public Long getId() {
@@ -69,24 +65,11 @@ public class Product {
         this.price = price;
     }
 
-    public Category getCategory() {
+    public CategoryDto getCategory() {
         return category;
     }
 
-    public void setCategory(Category category) {
+    public void setCategory(CategoryDto category) {
         this.category = category;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Product product = (Product) o;
-        return id.equals(product.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
     }
 }
