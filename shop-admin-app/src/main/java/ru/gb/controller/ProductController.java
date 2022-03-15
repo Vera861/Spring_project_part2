@@ -1,4 +1,4 @@
-package ru.geekbrains.controller;
+package ru.gb.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,11 +8,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import ru.geekbrains.persist.CategoryRepository;
-import ru.geekbrains.service.ProductService;
-import ru.geekbrains.service.dto.ProductDto;
+import org.springframework.web.servlet.ModelAndView;
+import ru.gb.controller.dto.ProductDto;
+import ru.gb.service.CategoryService;
+//import ru.gb.service.PictureService;
+import ru.gb.service.ProductService;
 
-import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.Optional;
 
@@ -24,52 +25,63 @@ public class ProductController {
 
     private final ProductService productService;
 
-    private final CategoryRepository categoryRepository;
+    private final CategoryService categoryService;
 
     @Autowired
     public ProductController(ProductService productService,
-                             CategoryRepository categoryRepository) {
+                             CategoryService categoryService) {
         this.productService = productService;
-        this.categoryRepository = categoryRepository;
+        this.categoryService = categoryService;
     }
 
     @GetMapping
-    public String listPage(Model model,
-                           HttpSession session,
-                           @RequestParam("nameFilter") Optional<String> nameFilter,
-                           @RequestParam("page") Optional<Integer> page,
-                           @RequestParam("size") Optional<Integer> size,
-                           @RequestParam("sort") Optional<String> sort) {
-        logger.info("Product filter with name pattern {}", nameFilter.orElse(null));
-
+    public String listPage(
+            @RequestParam("categoryId") Optional<Long> categoryId,
+            @RequestParam("namePattern") Optional<String> namePattern,
+            @RequestParam("page") Optional<Integer> page,
+            @RequestParam("size") Optional<Integer> size,
+            @RequestParam("sortField") Optional<String> sortField, Model model) {
+        model.addAttribute("categories", categoryService.findAll());
         model.addAttribute("products", productService.findAll(
-                nameFilter,
+                categoryId,
+                namePattern,
                 page.orElse(1) - 1,
                 size.orElse(5),
-                sort.filter(s -> !s.isBlank()).orElse("id")
-        ));
-        return "product";
+                sortField.filter(fld -> !fld.isBlank()).orElse("id")));
+        return "products";
     }
 
-    @GetMapping("/{id}")
-    public String edit(@PathVariable("id") Long id, Model model) {
-        model.addAttribute("product", productService.findById(id)
-                .orElseThrow(() -> new NotFoundException("Product not found")));
-        model.addAttribute("categories", categoryRepository.findAll());
-        return "product_form";
+    @ModelAttribute
+    public void addAttributes(Model model) {
+        model.addAttribute("activePage", "Product");
     }
 
     @GetMapping("/new")
-    public String create(Model model) {
+    public String newProductForm(Model model) {
+        logger.info("New product page requested");
 
         model.addAttribute("product", new ProductDto());
-        model.addAttribute("categories", categoryRepository.findAll());
+        model.addAttribute("categories", categoryService.findAll());
+        return "product_form";
+    }
+
+    @GetMapping("/{id}")
+    public String editProduct(@PathVariable("id") Long id, Model model) {
+        logger.info("Edit product page requested");
+
+        model.addAttribute("product", productService.findById(id)
+                .orElseThrow(() -> new NotFoundException("Product not found")));
+        model.addAttribute("categories", categoryService.findAll());
         return "product_form";
     }
 
     @PostMapping
-    public String save(@Valid ProductDto product, BindingResult result) {
+    public String update(@Valid @ModelAttribute("product") ProductDto product, BindingResult result, Model model) {
+        logger.info("Saving product");
+
         if (result.hasErrors()) {
+            logger.error(result.getAllErrors().toString());
+            model.addAttribute("categories", categoryService.findAll());
             return "product_form";
         }
         productService.save(product);
@@ -77,16 +89,19 @@ public class ProductController {
     }
 
     @DeleteMapping("/{id}")
-    public String delete(@PathVariable("id") Long id) {
+    public String deleteProduct(@PathVariable("id") Long id) {
+        logger.info("Deleting product with id {}", id);
+
         productService.deleteById(id);
         return "redirect:/product";
     }
 
     @ExceptionHandler
-    @ResponseStatus(HttpStatus.NOT_FOUND)
-    public String notFoundExceptionHandler(NotFoundException ex, Model model) {
-        model.addAttribute("message", ex.getMessage());
-        return "not_found";
+    public ModelAndView notFoundExceptionHandler(NotFoundException ex) {
+        ModelAndView modelAndView = new ModelAndView("not_found");
+        modelAndView.addObject("message", ex.getMessage());
+        modelAndView.setStatus(HttpStatus.NOT_FOUND);
+        return modelAndView;
     }
-}
 
+}

@@ -1,36 +1,37 @@
-package ru.geekbrains.service.dto;
+package ru.gb.controller.dto;
 
-import ru.gb.controller.dto.CategoryDto;
+import org.springframework.web.multipart.MultipartFile;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.PositiveOrZero;
 import java.math.BigDecimal;
+import java.util.List;
 
 public class ProductDto {
 
     private Long id;
 
-    @NotBlank
     private String name;
 
-    @NotBlank
     private String description;
 
-    @PositiveOrZero
     private BigDecimal price;
 
     private CategoryDto category;
 
+    private MultipartFile[] newPicture;
+
+    private List<Long> pictures;
+
     public ProductDto() {
     }
 
-    public ProductDto(Long id, String name, String description, BigDecimal price, CategoryDto category) {
+    public ProductDto(Long id, String name, String description, BigDecimal price,
+                      CategoryDto category, List<Long> pictures) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
         this.category = category;
-
+        this.pictures = pictures;
     }
 
     public Long getId() {
@@ -71,5 +72,21 @@ public class ProductDto {
 
     public void setCategory(CategoryDto category) {
         this.category = category;
+    }
+
+    public MultipartFile[] getNewPicture() {
+        return newPicture;
+    }
+
+    public void setNewPicture(MultipartFile[] newPicture) {
+        this.newPicture = newPicture;
+    }
+
+    public List<Long> getPictures() {
+        return pictures;
+    }
+
+    public void setPictures(List<Long> pictures) {
+        this.pictures = pictures;
     }
 }

@@ -1,18 +1,18 @@
-package ru.geekbrains.service;
+package ru.gb.service;
 
 import org.springframework.data.domain.Page;
-import ru.geekbrains.service.dto.ProductDto;
+import ru.gb.controller.dto.ProductDto;
 
 import java.util.Optional;
 
 public interface ProductService {
 
-    Page<ProductDto> findAll(Optional<String> nameFilter, Integer page, Integer size, String sort);
+    Page<ProductDto> findAll(Optional<Long> categoryId, Optional<String> namePattern,
+                             Integer page, Integer size, String sortField);
 
     Optional<ProductDto> findById(Long id);
 
-    ProductDto save(ProductDto product);
+    void save(ProductDto productDto);
 
     void deleteById(Long id);
-
 }

@@ -1,4 +1,4 @@
-package ru.geekbrains.service;
+package ru.gb.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -6,10 +6,21 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
-import ru.geekbrains.persist.*;
-import ru.geekbrains.service.dto.ProductDto;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
+import ru.gb.controller.NotFoundException;
+import ru.gb.controller.dto.CategoryDto;
+import ru.gb.controller.dto.ProductDto;
+import ru.gb.persist.CategoryRepository;
+import ru.gb.persist.ProductRepository;
+import ru.gb.persist.ProductSpecification;
+import ru.gb.persist.model.Category;
+import ru.gb.persist.model.Picture;
+import ru.gb.persist.model.Product;
 
+import java.io.IOException;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -18,57 +29,78 @@ public class ProductServiceImpl implements ProductService {
 
     private final CategoryRepository categoryRepository;
 
+    private final PictureService pictureService;
+
     @Autowired
     public ProductServiceImpl(ProductRepository productRepository,
-                              CategoryRepository categoryRepository) {
+                              CategoryRepository categoryRepository, PictureService pictureService) {
         this.productRepository = productRepository;
         this.categoryRepository = categoryRepository;
+        this.pictureService = pictureService;
     }
 
     @Override
-    public Page<ProductDto> findAll(Optional<String> nameFilter, Integer page,
-                                    Integer size, String sort) {
+    public Page<ProductDto> findAll(Optional<Long> categoryId, Optional<String> namePattern,
+                                    Integer page, Integer size, String sortField) {
         Specification<Product> spec = Specification.where(null);
-        if (nameFilter.isPresent() && !nameFilter.get().isBlank()) {
-            spec.and(ProductSpecification.nameLike(nameFilter.get()));
+        if (categoryId.isPresent() && categoryId.get() != -1) {
+            spec = spec.and(ProductSpecification.byCategory(categoryId.get()));
         }
-        return productRepository.findAll(spec, PageRequest.of(page, size, Sort.by(sort)))
-                .map(ProductServiceImpl::convertToDto);
-
+        if (namePattern.isPresent()) {
+            spec = spec.and(ProductSpecification.byName(namePattern.get()));
+        }
+        return productRepository.findAll(spec, PageRequest.of(page, size, Sort.by(sortField)))
+                .map(product -> new ProductDto(product.getId(),
+                        product.getName(),
+                        product.getDescription(),
+                        product.getPrice(),
+                        new CategoryDto(product.getCategory().getId(), product.getCategory().getName()),
+                        product.getPictures().stream().map(Picture::getId).collect(Collectors.toList())));
     }
 
     @Override
     public Optional<ProductDto> findById(Long id) {
         return productRepository.findById(id)
-                .map(ProductServiceImpl::convertToDto);
+                .map(product -> new ProductDto(product.getId(),
+                        product.getName(),
+                        product.getDescription(),
+                        product.getPrice(),
+                        new CategoryDto(product.getCategory().getId(), product.getCategory().getName()),
+                        product.getPictures().stream().map(Picture::getId).collect(Collectors.toList())));
     }
 
     @Override
-    public ProductDto save(ProductDto productDto) {
-        Category category = categoryRepository.findById(productDto.getCategoryId())
-                .orElse(null);
-        Product product = new Product(
-                productDto.getId(),
-                productDto.getName(),
-                productDto.getDescription(),
-                productDto.getPrice(), category);
-        Product saved = productRepository.save(product);
-        return convertToDto(saved);
+    @Transactional
+    public void save(ProductDto productDto) {
+        Product product = (productDto.getId() != null) ? productRepository.findById(productDto.getId())
+                .orElseThrow(() -> new NotFoundException("")) : new Product();
+        Category category = categoryRepository.findById(productDto.getCategory().getId())
+                .orElseThrow(() -> new RuntimeException("Category not found"));
+
+        product.setName(productDto.getName());
+        product.setCategory(category);
+        product.setPrice(productDto.getPrice());
+        product.setDescription(productDto.getDescription());
+
+        if (productDto.getNewPicture() != null) {
+            for (MultipartFile newPicture: productDto.getNewPicture()) {
+                try {
+                    product.getPictures().add(new Picture(null,
+                            newPicture.getOriginalFilename(),
+                            newPicture.getContentType(),
+                            pictureService.createPicture(newPicture.getBytes()),
+                            product));
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
+            }
+        }
+
+        productRepository.save(product);
     }
 
     @Override
     public void deleteById(Long id) {
         productRepository.deleteById(id);
-    }
-
-    private static ProductDto convertToDto(Product prod) {
-        return new ProductDto(
-                prod.getId(),
-                prod.getName(),
-                prod.getDescription(),
-                prod.getPrice(),
-                prod.getCategory() != null ? prod.getCategory().getId() : null,
-                prod.getCategory() != null ? prod.getCategory().getName() : null
-        );
     }
 }

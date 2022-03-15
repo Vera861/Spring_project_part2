@@ -37,7 +37,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:if="${users.hasContent()}" th:each="user : ${users.content}">
+                <tr th:if="${user.hasContent()}" th:each="user : ${user.content}">
                     <th scope="row" th:text="${user.id}">1</th>
                     <td th:text="${user.username}">Alex</td>
                     <td>
@@ -48,7 +48,7 @@
                     </td>
                 </tr>
 
-                <tr th:unless="${users.hasContent()}">
+                <tr th:unless="${user.hasContent()}">
                     <td colspan="4">No data</td>
                 </tr>
 
@@ -56,7 +56,7 @@
             </table>
         </div>
 
-        <div th:replace="fragments/paginator.html :: paginator(${users}, ~{::paginatorLink})">
+        <div th:replace="fragments/paginator.html :: paginator(${user}, ~{::paginatorLink})">
             <a th:fragment="paginatorLink" class="page-link"
                th:text="${num}"
                th:href="@{/user(page=${num}, size=${data.size},
