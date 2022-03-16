@@ -16,7 +16,7 @@
     <resource url="http://www.liquibase.org/xml/ns/pro" location="$PROJECT_DIR$" />
     <resource url="http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd" location="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_9" default="false" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

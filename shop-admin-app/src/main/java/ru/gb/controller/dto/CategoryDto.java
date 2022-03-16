@@ -16,7 +16,7 @@ public class CategoryDto {
         this.id = id;
     }
 
-    public CategoryDto(Long id, @NotBlank String name) {
+    public CategoryDto(Long id, String name) {
         this.id = id;
         this.name = name;
     }

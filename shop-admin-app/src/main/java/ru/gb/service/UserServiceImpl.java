@@ -38,8 +38,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<UserDto> findAll() {
         return userRepository.findAll().stream()
-                .map(user -> new UserDto(user.getId(),
-                        user.getUsername()))
+                .map(users -> new UserDto(users.getId(),
+                        users.getUsername()))
                 .collect(Collectors.toList());
     }
 
@@ -70,7 +70,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public Optional<UserDto> findById(Long id) {
         return userRepository.findById(id)
-                .map(user -> new UserDto(user.getId(), user.getUsername(), user.getEmail(), mapRolesDto(user)));
+                .map(users -> new UserDto(users.getId(), users.getUsername(), users.getEmail(), mapRolesDto(users)));
     }
 
     @Override

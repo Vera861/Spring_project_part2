@@ -7,7 +7,7 @@
     <include file="db.changelog-20220217-214147111.xml" relativeToChangelogFile="true"/>
 
     <changeSet id="1645134208542-7" author="vera_m">
-        <sqlFile path="insert-default-users-roles.sql"
+        <sqlFile path="insert-default-user-roles.sql"
                  dbms="mysql"
                  endDelimiter="GO"
                  relativeToChangelogFile="true"

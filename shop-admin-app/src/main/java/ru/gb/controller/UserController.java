@@ -1,19 +1,22 @@
-package ru.geekbrains.controller;
+package ru.gb.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import ru.geekbrains.persist.RoleRepository;
-import ru.geekbrains.persist.User;
-import ru.geekbrains.persist.UserRepository;
+import org.springframework.web.servlet.ModelAndView;
+import ru.gb.controller.dto.RoleDto;
+import ru.gb.controller.dto.UserDto;
+import ru.gb.controller.dto.UserListParams;
+import ru.gb.persist.RoleRepository;
+import ru.gb.service.UserService;
 
 import javax.validation.Valid;
+import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/user")
@@ -21,62 +24,89 @@ public class UserController {
 
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
-    private final UserRepository userRepository;
+    private final UserService userService;
 
     private final RoleRepository roleRepository;
 
-    private final PasswordEncoder encoder;
-
     @Autowired
-    public UserController(UserRepository userRepository,
-                          RoleRepository roleRepository,
-                          PasswordEncoder encoder) {
-        this.userRepository = userRepository;
+    public UserController(UserService userService, RoleRepository roleRepository) {
+        this.userService = userService;
         this.roleRepository = roleRepository;
-        this.encoder = encoder;
+    }
+
+    @ModelAttribute
+    public void addAttributes(Model model) {
+        model.addAttribute("activePage", "User");
     }
 
     @GetMapping
-    public String listPage(Model model) {
-        model.addAttribute("users", userRepository.findAll());
-        return "user";
-    }
+    public String listPage(Model model,
+                           UserListParams userListParams) {
+        logger.info("User list page requested");
 
-    @GetMapping("/{id}")
-    public String edit(@PathVariable("id") Long id, Model model) {
-        model.addAttribute("roles", roleRepository.findAll());
-        model.addAttribute("user", userRepository.findById(id)
-                .orElseThrow(() -> new NotFoundException("User not found")));
-        return "user_form";
+        model.addAttribute("users", userService.findWithFilter(userListParams));
+        return "users";
     }
 
     @GetMapping("/new")
-    public String create(Model model) {
-        model.addAttribute("roles", roleRepository.findAll());
-        model.addAttribute("user", new User());
+    public String newUserForm(Model model) {
+        logger.info("New user page requested");
+
+        model.addAttribute("user", new UserDto());
+        model.addAttribute("roles", roleRepository.findAll().stream()
+                .map(role -> new RoleDto(role.getId(), role.getName()))
+                .collect(Collectors.toList()));
+        return "user_form";
+    }
+
+    @GetMapping("/{id}")
+    public String editUser(@PathVariable("id") Long id, Model model) {
+        logger.info("Edit user page requested");
+
+        model.addAttribute("user", userService.findById(id)
+                .orElseThrow(() -> new NotFoundException("User not found")));
+        model.addAttribute("roles", roleRepository.findAll().stream()
+                .map(role -> new RoleDto(role.getId(), role.getName()))
+                .collect(Collectors.toList()));
         return "user_form";
     }
 
     @PostMapping
-    public String save(@Valid User user, BindingResult result) {
+    public String update(@Valid @ModelAttribute("user") UserDto user, BindingResult result, Model model) {
+        logger.info("Saving user");
+
         if (result.hasErrors()) {
+            model.addAttribute("roles", roleRepository.findAll().stream()
+                    .map(role -> new RoleDto(role.getId(), role.getName()))
+                    .collect(Collectors.toList()));
             return "user_form";
         }
-        user.setPassword(encoder.encode(user.getPassword()));
-        userRepository.save(user);
+
+        if (!user.getPassword().equals(user.getRepeatPassword())) {
+            model.addAttribute("roles", roleRepository.findAll().stream()
+                    .map(role -> new RoleDto(role.getId(), role.getName()))
+                    .collect(Collectors.toList()));
+            result.rejectValue("password", "", "Repeated password is not correct");
+            return "user_form";
+        }
+
+        userService.save(user);
         return "redirect:/user";
     }
 
     @DeleteMapping("/{id}")
-    public String delete(@PathVariable("id") Long id) {
-        userRepository.deleteById(id);
+    public String deleteUser(@PathVariable("id") Long id) {
+        logger.info("Deleting user with id {}", id);
+
+        userService.deleteById(id);
         return "redirect:/user";
     }
 
-    @ExceptionHandler
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public String notFoundExceptionHandler(NotFoundException ex, Model model) {
-        model.addAttribute("message", ex.getMessage());
-        return "not_found";
+    @ExceptionHandler
+    public ModelAndView notFoundExceptionHandler(NotFoundException ex) {
+        ModelAndView modelAndView = new ModelAndView("not_found");
+        modelAndView.addObject("message", ex.getMessage());
+        return modelAndView;
     }
 }
