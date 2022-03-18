@@ -2,11 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <parent>
-        <artifactId>Spring_project_part2</artifactId>
-        <groupId>ru.gb</groupId>
+        <artifactId>geek-eshop-02-15</artifactId>
+        <groupId>ru.geekbrains</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>shop-database</artifactId>
@@ -54,7 +56,7 @@
                 <configuration>
                     <propertyFile>target/classes/liquibase-maven-plugin.properties</propertyFile>
                     <systemProperties>
-                        <user.name>vera_m</user.name>
+                        <user.name>aleks_ush</user.name>
                     </systemProperties>
                 </configuration>
                 <dependencies>
@@ -72,4 +74,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

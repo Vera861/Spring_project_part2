@@ -4,12 +4,69 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="510ab973-2a66-4f56-86df-8dbe380a4fde" name="Default Changelist" comment="">
+    <list default="true" id="510ab973-2a66-4f56-86df-8dbe380a4fde" name="Default Changelist" comment="admin_app">
+      <change afterPath="$PROJECT_DIR$/shop-frontend-app/ng-comands.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eshop-backend-api-app/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eshop-backend-api-app/src/main/java/ru/gb/EshopBackendApiAppApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eshop-backend-api-app/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eshop-backend-api-app/src/test/java/ru/gb/EshopBackendApiAppApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-admin-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin-app/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-database/src/main/java/ru/gb/persist/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-database/src/main/java/ru/gb/persist/model/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-database/src/main/java/ru/gb/persist/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-database/src/main/java/ru/gb/persist/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/main/java/ru/gb/ShopAdminAppApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/main/java/ru/gb/controller/CategoryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/main/java/ru/gb/controller/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/main/java/ru/gb/controller/MainPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/main/java/ru/gb/controller/NotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/main/java/ru/gb/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/main/java/ru/gb/controller/StringToCategoryDtoConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/main/java/ru/gb/controller/StringToRoleDtoConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/main/java/ru/gb/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/main/java/ru/gb/controller/dto/CategoryDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/main/java/ru/gb/controller/dto/ProductDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/main/java/ru/gb/controller/dto/RoleDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/main/java/ru/gb/controller/dto/UserDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/main/java/ru/gb/controller/dto/UserListParams.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/main/java/ru/gb/security/SecurityConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/main/java/ru/gb/security/UserDetailServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/main/java/ru/gb/service/CategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/main/java/ru/gb/service/CategoryServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/main/java/ru/gb/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/main/java/ru/gb/service/ProductServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/main/java/ru/gb/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/main/java/ru/gb/service/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin-app/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/main/resources/templates/product_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin-app/src/main/resources/templates/product_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/main/resources/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop-admin-app/src/main/resources/templates/users.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-admin-app/src/test/java/ru/gb/ShopAdminAppApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-database/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-database/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-database/src/main/java/ru/gb/Utils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-database/src/main/java/ru/gb/persist/CategoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-database/src/main/java/ru/gb/persist/PictureRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-database/src/main/java/ru/gb/persist/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-database/src/main/java/ru/gb/persist/ProductSpecification.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-database/src/main/java/ru/gb/persist/RoleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-database/src/main/java/ru/gb/persist/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-database/src/main/java/ru/gb/persist/UserSpecifications.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-database/src/main/java/ru/gb/persist/model/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-database/src/main/java/ru/gb/persist/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-database/src/main/java/ru/gb/persist/model/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-database/src/main/java/ru/gb/persist/model/User.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-database/src/main/resources/db/changelog/db.changelog-master.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-database/src/main/resources/db/changelog/db.changelog-master.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-database/src/main/resources/db/changelog/v-1.0/db.changelog-20220217-214147111.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-database/src/main/resources/db/changelog/v-1.0/insert-default-users-roles.sql" beforeDir="false" afterPath="$PROJECT_DIR$/shop-database/src/main/resources/db/changelog/v-1.0/insert-default-users-roles.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-database/src/main/resources/db/changelog/v-1.0/root.changelog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-database/src/main/resources/db/changelog/v-1.0/root.changelog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-database/src/main/resources/db/changelog/v-1.1/db.changelog-20220217-232444070.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-database/src/main/resources/db/changelog/v-1.1/root.changelog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-database/src/main/resources/db/changelog/v-1.1/root.changelog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-database/src/main/resources/db/changelog/v-2.0/db.changelog-20220222-181814599.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-database/src/main/resources/db/changelog/v-2.0/db.changelog-20220222-181814599.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-database/src/main/resources/db/changelog/v-2.0/root.changelog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-database/src/main/resources/db/changelog/v-2.0/root.changelog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-database/src/main/resources/liquibase-maven-plugin.properties" beforeDir="false" afterPath="$PROJECT_DIR$/shop-database/src/main/resources/liquibase-maven-plugin.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-frontend-app/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/shop-frontend-app/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-frontend-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/shop-frontend-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-frontend-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/shop-frontend-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-frontend-app/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shop-frontend-app/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-frontend-app/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop-frontend-app/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-frontend-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shop-frontend-app/src/app/app.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,10 +84,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lesson1" />
+        <entry key="$PROJECT_DIR$" value="lesson2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -40,6 +98,7 @@
     </option>
   </component>
   <component name="ProjectId" id="25CyvoRs4s90yyqW7H00MEzf206" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -50,37 +109,37 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/shop-database/src/main/resources/db/changelog/v-1.1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/shop-database/src/main/java/ru/gb/persist" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="ru.gb" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\mvery\Desktop\Spring_project_part2\shop-database\src\main\resources\db\changelog\v-1.1" />
-      <recent name="C:\Users\mvery\Desktop\Spring_project_part2\shop-database\src\main\resources\db\changelog\v-1.0" />
-      <recent name="C:\Users\mvery\Desktop\Spring_project_part2\shop-database\src\main\resources" />
-      <recent name="C:\Users\mvery\Desktop\Spring_project_part2\shop-database\src\main\java\ru\gb\persists" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mvery\Desktop\Spring_project_part2\shop-database\src\main\resources\db\changelog\v-1.1" />
       <recent name="C:\Users\mvery\Desktop\Spring_project_part2\shop-database\src\main\resources\db\changelog\v-1.0" />
       <recent name="C:\Users\mvery\Desktop\Spring_project_part2" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ru.gb" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mvery\Desktop\Spring_project_part2\shop-database\src\main\java\ru\gb\persist" />
+      <recent name="C:\Users\mvery\Desktop\Spring_project_part2\shop-database\src\main\java\ru\gb\persist\model" />
+      <recent name="C:\Users\mvery\Desktop\Spring_project_part2\shop-admin-app\src\main\java\ru\gb\service" />
+      <recent name="C:\Users\mvery\Desktop\Spring_project_part2\shop-admin-app\src\main\java\ru\gb\security" />
+      <recent name="C:\Users\mvery\Desktop\Spring_project_part2\shop-database\src\main\resources\db\changelog\v-1.1" />
+    </key>
   </component>
-  <component name="RunManager" selected="Maven. liquibase:update">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ShopAdminAppApplication">
     <configuration name=" liquibase:update" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -223,6 +282,11 @@
       <workItem from="1645045654175" duration="7899000" />
       <workItem from="1645057763639" duration="2063000" />
       <workItem from="1645103211030" duration="12329000" />
+      <workItem from="1646832064388" duration="818000" />
+      <workItem from="1646898298377" duration="9160000" />
+      <workItem from="1647366282346" duration="2768000" />
+      <workItem from="1647370836639" duration="898000" />
+      <workItem from="1647372211253" duration="9227000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1645047869675</created>
@@ -245,7 +309,21 @@
       <option name="project" value="LOCAL" />
       <updated>1645144928956</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="admin_app">
+      <created>1646153068993</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1646153068993</updated>
+    </task>
+    <task id="LOCAL-00005" summary="admin_app">
+      <created>1646153704488</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1646153704488</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,7 +333,8 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="liquibase dependency" />
     <MESSAGE value="liquibase" />
-    <option name="LAST_COMMIT_MESSAGE" value="liquibase" />
+    <MESSAGE value="admin_app" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin_app" />
   </component>
   <component name="WindowStateProjectService">
     <state x="241" y="22" width="1125" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1645140519598">
@@ -266,10 +345,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="429" y="233" width="542" height="270" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1645056199691" />
-    <state x="279" y="0" key="CommitChangelistDialog2" timestamp="1645146267004">
+    <state x="193" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1647379176871">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="279" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1645146267004" />
+    <state x="193" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1647379176871" />
+    <state x="279" y="0" key="CommitChangelistDialog2" timestamp="1647382564663">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="279" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1647382564647" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1645132696625">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -298,14 +381,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1645059132512" />
-    <state x="184" y="9" key="SettingsEditor" timestamp="1645136658369">
+    <state x="213" y="19" key="Maven.ArtifactSearchDialog" timestamp="1647374625307">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1645136658369" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1645144941555">
+    <state x="213" y="19" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1647374625307" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1647379913709">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1645144941555" />
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1647379913709" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1646153715627">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1646153715627" />
     <state x="144" y="56" key="com.intellij.javaee.MapExternalResourceDialog" timestamp="1645136198945">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -314,5 +401,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="65" y="25" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1645051349414" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1646905494064">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1646905494064" />
   </component>
 </project>

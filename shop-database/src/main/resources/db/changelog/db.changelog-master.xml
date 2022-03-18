@@ -9,26 +9,32 @@
         <runningAs username="root"/>
     </preConditions>
 
-    <changeSet id="0" author="vera_m">
+    <changeSet id="0" author="aleks_ush">
         <tagDatabase tag="db_init"/>
     </changeSet>
 
     <include file="v-1.0/root.changelog.xml" relativeToChangelogFile="true"/>
 
-    <changeSet id="100" author="vera_m">
+    <changeSet id="100" author="aleks_ush">
         <tagDatabase tag="v-1.0"/>
     </changeSet>
 
     <include file="v-1.1/root.changelog.xml" relativeToChangelogFile="true"/>
 
-    <changeSet id="200" author="vera_m">
+    <changeSet id="200" author="aleks_ush">
         <tagDatabase tag="v-1.1"/>
     </changeSet>
 
     <include file="v-2.0/root.changelog.xml" relativeToChangelogFile="true"/>
 
-    <changeSet id="300" author="vera_m">
+    <changeSet id="300" author="aleks_ush">
         <tagDatabase tag="v-2.0"/>
+    </changeSet>
+
+    <include file="v-2.1/root.changelog.xml" relativeToChangelogFile="true"/>
+
+    <changeSet id="400" author="aleks_ush">
+        <tagDatabase tag="v-2.1"/>
     </changeSet>
 
 </databaseChangeLog>

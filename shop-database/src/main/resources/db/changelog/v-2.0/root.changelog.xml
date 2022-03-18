@@ -6,7 +6,7 @@
 
     <include file="db.changelog-20220222-181814599.xml" relativeToChangelogFile="true"/>
 
-    <changeSet id="1645553904113-5" author="vera_m">
+    <changeSet id="1645553904113-5" author="aleks_ush">
         <sqlFile path="insert-categories.sql"
                  dbms="mysql"
                  endDelimiter="GO"
